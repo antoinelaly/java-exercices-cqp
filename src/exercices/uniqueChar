@@ -17,8 +17,6 @@ public class App
         }
         return ("ok");
     }
-
-
 }
 
 //----------------------------------------------------------------
@@ -26,9 +24,7 @@ public class App
 package com.simplon.uniquechar;
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
-
 
 public class uniquecharTest {
 
