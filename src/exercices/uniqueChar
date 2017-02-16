@@ -1,11 +1,8 @@
-package com.simplon.uniquechar;
-
-
 import java.util.HashSet;
 
 public class App
 {
-    public static void main (String args[])
+    public String comparChar (String string)
     {
         boolean result=false;
         String inputstring="abcdafg";
@@ -15,9 +12,36 @@ public class App
         {
             result=uniquecharset.add(inputstring.charAt(i));
             if (result == false)
+                return ("ko");
                 break;
         }
-        System.out.println(result);
+        return ("ok");
     }
+
+
 }
 
+//----------------------------------------------------------------
+
+package com.simplon.uniquechar;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+
+public class uniquecharTest {
+
+    @Test
+    public void App() {
+        // set
+        App stringTest = new App();
+
+        // test
+        String result = stringTest.comparChar("abcdefg");
+
+        // assert
+        assertEquals("ok",result);
+
+    }
+}
