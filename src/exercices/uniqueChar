@@ -1,0 +1,23 @@
+package com.simplon.uniquechar;
+
+
+import java.util.HashSet;
+
+public class App
+{
+    public static void main (String args[])
+    {
+        boolean result=false;
+        String inputstring="abcdafg";
+
+        HashSet < Character> uniquecharset= new HashSet();
+        for(int i=0;i < inputstring.length();i++)
+        {
+            result=uniquecharset.add(inputstring.charAt(i));
+            if (result == false)
+                break;
+        }
+        System.out.println(result);
+    }
+}
+
